@@ -1,0 +1,154 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  title littleweb | web development
+  link(rel='shortcut icon' href='assets/images/favicon.png')
+  // STYLESHEETS
+  link(href='https://fonts.googleapis.com/css?family=Montserrat&display=swap' rel='stylesheet')
+  link(rel='stylesheet' type='text/css' href='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css')
+  link(rel='stylesheet' href='./sass/style.scss')
+  link(rel='stylesheet' href='static/css/animate.css')
+  // 
+  // Scripts
+  script(src='https://code.jquery.com/jquery-3.4.1.slim.min.js' integrity='sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=' crossorigin='anonymous')
+  script(type='text/javascript' src='//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js')
+  script(defer='' src='js/wow.min.js')
+  script(defer='' src='js/wow.js')
+  script(defer='' src='./js/index.js')
+  // 
+nav.home-nav
+  ul
+    li.nav-item
+      a.active(href='#hero') Home
+    li.nav-item
+      a(href='#about') About
+    li.nav-item
+      a(href='#work') Work
+    li.nav-item
+      a(href='#contact') Contact
+section.hero
+  h1.wow.fadeIn(data-wow-delay='0.5s' data-wow-duration='2s')
+    | Simply Think Big
+section#about
+  section.overlap
+    p
+      | Hi, my name is Ruben. I love beautiful landscapes and websites. What
+      | do you love?
+  h2 What we offer
+  p.value-prop
+    | Our main service is complete fullstack applications. We use only the
+    | most modern tools, to ensure maximal efficiency and completeness of
+    | result. By purchasing our services, you can rest assured that you are
+    | getting a great product.
+  section.services
+    .card
+      img#database-icon.serviceicon.wow.zoomIn(src='./assets/images/services/database-g.png' alt='database' data-wow-delay='0.3s' data-wow-duration='1s')
+      h3 Cloud Hosting
+      p
+        | We manage hosting so that you don&apos;t have to. Sit back and relax, and
+        | do what you do best, and we&apos;ll do the rest!
+    .card
+      img#development-icon.serviceicon.wow.zoomIn(src='./assets/images/services/web-design-g.png' alt='web design icon' data-wow-delay='0.6s' data-wow-duration='1s')
+      h3 Web Development
+      p
+        | Web development is our bread and butter. We turn your idea and
+        | passion into reality for the whole world to see. Think big!
+    .card
+      img#support-icon.serviceicon.wow.zoomIn(src='./assets/images/services/support-g.png' alt='handshake' data-wow-delay='0.9s' data-wow-duration='1s')
+      h3 Support
+      p
+        | We give long term support for all our projects. By choosing us, we
+        | guarantee you any guidance you need, and happily help guide your
+        | project.
+section#technologies
+  h2 My favourite technologies
+  p
+    | While we love a great challenge and an opportunity to learn something
+    | new, these are the technologies we are most experienced in.
+  ul#tech-listing
+    li
+      figure.wow.bounceInLeft(data-wow-delay='1.2s')
+        img(src='assets/images/technologies/js.png' alt='javascript logo')
+        figcaption JavaScript
+    li
+      figure.wow.bounceInLeft(data-wow-delay='1s')
+        img(src='assets/images/technologies/react.png' alt='ReactJS logo')
+        figcaption
+          | ReactJS
+    li
+      figure.wow.bounceInLeft(data-wow-delay='0.8s')
+        img(src='assets/images/technologies/firebase.png' alt='Firebase logo')
+        figcaption
+          | Firebase
+    li
+      figure.wow.bounceInLeft(data-wow-delay='0.6s')
+        img(src='assets/images/technologies/wordpress.png' alt='Wordpress logo')
+        figcaption
+          | Wordpress
+    li
+      figure.wow.bounceInLeft(data-wow-delay='0.4s')
+        img(src='assets/images/technologies/node.png' alt='Node logo')
+        figcaption
+          | Node
+    li
+      figure.wow.bounceInLeft(data-wow-delay='0.2s')
+        img(src='assets/images/technologies/sass.png' alt='Sass logo')
+        figcaption
+          | Sass
+section#work
+  h2 My most recent work
+  p
+    | Here are some of my most recent projects, feel free to ask me about
+    | them!
+  section#references
+    #ref-dageni.reference
+      .image-wrapper
+        img(src='assets/images/references/dageni.PNG' alt='')
+        .hover-info
+          p.project-info
+            | Event site for the yearly job fair at the chapter for industrial
+            | engineering and management at the royal institute of technology
+          a(href='https://littleweb.se/projects/dageni')
+            button More Info
+    #ref-castelli.reference
+      .image-wrapper
+        img(src='assets/images/references/castelli.PNG' alt='')
+        .hover-info
+          p.project-info
+            | Showcasing site for realtor specialized in luxurious houses in
+            | the swedish archipelago
+          a(href='https://littleweb.se/projects/castelli')
+            button More Info
+    #ref-iare.reference
+      .image-wrapper
+        img(src='assets/images/references/iare.PNG' alt='')
+        .hover-info
+          p.project-info
+            | Home page to the chapter of industrial engineering and
+            | management at the royal institute of technology in Sweden,
+            | complete with a system for payment and events
+          a(href='https://littleweb.se/projects/iare')
+            button More Info
+section#contact
+  h2 Get in touch
+  p
+    | Are you someone looking to realise an idea, or an employer in need of
+    | skilled labor? Contact me, and let&apos;s have a chat!
+  form
+    span.input-wrapper
+      label Name
+      input(type='text')
+    span.input-wrapper
+      label Email
+      input(type='text')
+    label Message
+    textarea(rows='5')
+    button(type='submit') Submit
+footer
+  span
+    p
+      a(href='mailto:hello@littleweb.se') hello@littleweb.se
+  .image-wrapper
+    img(src='./assets/images/logo.png' alt='littleweb logo')

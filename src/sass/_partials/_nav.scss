@@ -1,0 +1,68 @@
+// TODO: Ge bakgrund vid scroll
+nav.home-nav {
+  position: fixed;
+  z-index: 9999;
+  padding: 10px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 0.3s;
+  height: 1em;
+
+  &.scrolled {
+    background-color: rgba(255, 255, 255, 0.85);
+    height: 1.5em;
+    border-bottom: 1px solid grey;
+  }
+
+  ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    // TODO: Display active class based on scroll location
+    li.nav-item {
+      display: inline-block;
+      text-transform: uppercase;
+
+      a {
+        color: #000;
+        text-decoration: none;
+        position: relative;
+        transition: 0.5s;
+
+        &::before {
+          width: 0;
+          transition: 0.5s;
+          content: " ";
+          height: 2px;
+          background-color: $main;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+
+        &.active {
+          color: $main;
+
+          &::before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: $tablet) {
+    justify-content: flex-start;
+
+    ul {
+      width: min-content;
+      li {
+        margin: 0 20px;
+      }
+    }
+  }
+}
